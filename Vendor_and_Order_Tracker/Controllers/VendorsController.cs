@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System;
 using Microsoft.AspNetCore.Mvc;
-using Vendor_and _Order_Tracker.Models;
+using Vendor_and_Order_Tracker.Models;
 
 namespace Vendor_and_Order_Tracker.Controllers
 {
@@ -21,9 +21,9 @@ namespace Vendor_and_Order_Tracker.Controllers
     }
 
     [HttpPost("/vendors/create")]
-    public ActionResult Create(string vendorName, string shipTo, string shipAddress, string shipState, string shipCity, string shipZip, string vendorName, string phoneNum, string email)
+    public ActionResult Create(string vendorName, string shipTo, string shipAddress, string shipState, string shipCity, string shipZip, string phoneNum, string email)
     {
-      Vendor vendor =new Vendor(vendorName, shipTo, shipAddress, shipState, shipCity, shipZip, vendorName, phoneNum, email)
+      Vendor vendor =new Vendor(vendorName, shipTo, shipAddress, shipState, shipCity, shipZip, vendorName, phoneNum, email);
       return RedirectToAction("Index");
     }
   }

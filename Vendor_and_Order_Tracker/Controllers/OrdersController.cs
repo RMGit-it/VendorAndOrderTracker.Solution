@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System;
 using Microsoft.AspNetCore.Mvc;
-using Vendor_and _Order_Tracker.Models;
+using Vendor_and_Order_Tracker.Models;
 
 namespace Vendor_and_Order_Tracker.Controllers
 {
@@ -17,7 +17,7 @@ namespace Vendor_and_Order_Tracker.Controllers
     [HttpGet("/orders/new")]
     public ActionResult New()
     {
-      List<Vendor> vendorList = Vendor.GetList()
+      List<Vendor> vendorList = Vendor.GetList();
       return View(vendorList);
     }
   }
