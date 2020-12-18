@@ -16,7 +16,8 @@ namespace Vendor_and_Order_Tracker.Tests
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_True()
     {
-      
+      Vendor ven1 = new Vendor(a,b,c,d,e,f,g,h);
+      CollectionAssert.AreEqual(typeof(int), ven1.GetType());
     }
   }
 }
