@@ -20,5 +20,12 @@ namespace Vendor_and_Order_Tracker.Controllers
       List<Vendor> vendorList = Vendor.GetList();
       return View(vendorList);
     }
+
+    [HttpPost("/orders")]
+    public ActionResult Create(string orderVendorId, string orderDate, string deliveryForDate, string ryeLoaf, string wheatLoaf, string gfLoaf, string croissant, string baklava, string danish)
+    {
+      Order order = new Order(orderVendorId, orderDate, deliveryForDate, ryeLoaf, wheatLoaf, gfLoaf, croissant, baklava, danish);
+      return RedirectToAction("Index");
+    }
   }
 }

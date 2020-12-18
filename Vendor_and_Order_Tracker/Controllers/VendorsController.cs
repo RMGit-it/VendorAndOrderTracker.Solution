@@ -20,10 +20,10 @@ namespace Vendor_and_Order_Tracker.Controllers
       return View();
     }
 
-    [HttpPost("/vendors/create")]
-    public ActionResult Create(string vendorName, string shipTo, string shipAddress, string shipState, string shipCity, string shipZip, string phoneNum, string email)
+    [HttpPost("/vendors")]
+    public ActionResult Create(string vendorName, string shipToName, string shipAddress, string shipState, string shipCity, string shipZip, string phoneNum, string email)
     {
-      Vendor vendor =new Vendor(vendorName, shipTo, shipAddress, shipState, shipCity, shipZip, vendorName, phoneNum, email);
+      Vendor vendor = new Vendor(vendorName, shipToName, shipAddress, shipState, shipCity, shipZip, phoneNum, email);
       return RedirectToAction("Index");
     }
   }

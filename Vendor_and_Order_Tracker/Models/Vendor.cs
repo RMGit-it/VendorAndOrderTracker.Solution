@@ -16,18 +16,28 @@ namespace Vendor_and_Order_Tracker.Models
     private string Phone { get; set; }
     private string Email { get; set; }
 
-    public Vendor(string vendorName, string shipTo, string shipAddress, string shipState, string shipCity, string shipZip, string phoneNum, string email)
+    public Vendor(string vendorName, string shipToName, string shipAddress, string shipState, string shipCity, string shipZip, string phoneNum, string email)
     {
       _vendorList.Add(this);
       VendorName = vendorName;
-      Id = uniqueVenId();
-      ShipToName = shipTo;
+      Id = "uniqueVendorId()";
+      ShipToName = shipToName;
       Address = shipAddress;
       State = shipState;
       City = shipCity;
       Zipcode = shipZip;
       Phone = phoneNum;
       Email = email;
+    }
+
+    public void ClearList()
+    {
+      _vendorList.Clear();
+    }
+
+    public List<Vendor> GetList()
+    {
+      return _vendorList;
     }
   }
 }
