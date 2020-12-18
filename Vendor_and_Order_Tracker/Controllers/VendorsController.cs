@@ -12,5 +12,18 @@ namespace Vendor_and_Order_Tracker.Controllers
     {
       return View();
     }
+
+    [HttpGet("/vendors/new")]
+    public ActionResult New()
+    {
+      return View();
+    }
+
+    [HttpPost("/vendors/create")]
+    public ActionResult Create()
+    {
+      //do the creation here
+      return RedirectToAction("Index");
+    }
   }
 }
