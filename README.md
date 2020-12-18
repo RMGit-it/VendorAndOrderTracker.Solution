@@ -24,7 +24,7 @@ https://dotnet.microsoft.com/download
 
     <code>dotnet run</code>
 
-    The program should launch using your default web browser at URL: localhost:5000.
+    The program should launch using your default web browser at URL: localhost:5000
 
 **Option 2** (via git console/terminal)
 1) Open your Git enabled terminal/console and navigate to a directory that you wish to download this project to.
@@ -43,7 +43,7 @@ https://dotnet.microsoft.com/download
 
     <code>dotnet run</code>
 
-    The program should launch using your default web browser at URL: localhost:5000.
+    The program should launch using your default web browser at URL: localhost:5000
 ## **Usage / Examples**
 
 ## **Planned Features**
