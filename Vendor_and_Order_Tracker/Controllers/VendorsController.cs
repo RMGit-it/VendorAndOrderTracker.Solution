@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System;
 using Microsoft.AspNetCore.Mvc;
-using Template.Models;
+using Vendor_and _Order_Tracker.Models;
 
 namespace Vendor_and_Order_Tracker.Controllers
 {
@@ -10,7 +10,8 @@ namespace Vendor_and_Order_Tracker.Controllers
     [HttpGet("/vendors")]
     public ActionResult Index()
     {
-      return View();
+      List<Vendor> vendorList = Vendor.GetList();
+      return View(vendorList);
     }
 
     [HttpGet("/vendors/new")]
@@ -20,9 +21,9 @@ namespace Vendor_and_Order_Tracker.Controllers
     }
 
     [HttpPost("/vendors/create")]
-    public ActionResult Create()
+    public ActionResult Create(string vendorName, string shipTo, string shipAddress, string shipState, string shipCity, string shipZip, string vendorName, string phoneNum, string email)
     {
-      //do the creation here
+      Vendor vendor =new Vendor(vendorName, shipTo, shipAddress, shipState, shipCity, shipZip, vendorName, phoneNum, email)
       return RedirectToAction("Index");
     }
   }
