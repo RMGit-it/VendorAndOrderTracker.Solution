@@ -6,12 +6,35 @@
 
 <h1>Add Order</h1>
 
-<form action="/orders" method="post">
-  <label for="orderVenorName">Parent name</label>
-  <input id="orderVenorName" name="orderVenorName" type="text">
+@if (@Model.Count == 0)
+{
+  <h2>No Vendors have been added yet!</h2>
+}
 
-  <label for="shipTo">Parent name</label>
-  <input id="shipTo" name="shipTo" type="text">
+  
+<form action="/orders" method="post">
+  <select name="orderVendorName">
+      @foreach (Vendor element in Model)
+      {
+        <option value=@element.Id>@element.Name</option>
+      }
+  </select>
+  
+  
+  @* <select name="orderVenorName">
+    <ul>
+      @foreach (Vendor element in Model)
+      {
+        <li><option value=@element.Id>@element.Name</option></li>
+      }
+    </ul>
+  </select> *@
+
+  <label for="orderDate">Order Date</label>
+  <input id="orderDate" name="orderDate" type="date">
+
+  <label for="deliveryForDate">Order Date</label>
+  <input id="deliveryForDate" name="deliveryForDate" type="date">
 
   <label for="shipAddress">Parent name</label>
   <input id="shipAddress" name="shipAddress" type="text">
