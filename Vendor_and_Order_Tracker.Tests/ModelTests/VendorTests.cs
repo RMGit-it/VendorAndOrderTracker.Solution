@@ -41,7 +41,7 @@ namespace Vendor_and_Order_Tracker.Tests
     {
       Vendor ven1 = new Vendor("a","b","c","d","e","f","g","h");
       Vendor ven2 = new Vendor("a","b","c","d","e","f","g","h");
-      List<Vendor> list1 = new List<Vendor> { ven1 };
+      List<Vendor> list1 = new List<Vendor> { ven1, ven2 };
       CollectionAssert.AreEqual(list1, Vendor.GetList());
     }
 
