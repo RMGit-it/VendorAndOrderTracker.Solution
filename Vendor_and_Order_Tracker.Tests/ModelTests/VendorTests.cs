@@ -26,7 +26,7 @@ namespace Vendor_and_Order_Tracker.Tests
     {
     Vendor ven1 = new Vendor("a","b","c","d","e","f","g","h");
     Assert.AreEqual("a", ven1.GetVendorName());
-    Assert.AreEqual("b1", ven1.GetShipToName());
+    Assert.AreEqual("b", ven1.GetShipToName());
     Assert.AreEqual("c", ven1.GetAddress());
     Assert.AreEqual("d", ven1.GetState());
     Assert.AreEqual("e", ven1.GetCity());
