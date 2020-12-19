@@ -36,7 +36,14 @@ namespace Vendor_and_Order_Tracker.Tests
     Assert.AreEqual("VN" + String.Concat(DateTime.Now.ToString().Where(x => !Char.IsWhiteSpace(x))), ven1.GetVendorId());
     }
 
-
+    [TestMethod]
+    public void GetList_RetreiveStaticList_True()
+    {
+      Vendor ven1 = new Vendor("a","b","c","d","e","f","g","h");
+      Vendor ven2 = new Vendor("a","b","c","d","e","f","g","h");
+      List<Vendor> list1 = new List<Vendor> { ven1 };
+      CollectionAssert.AreEqual(list1, Vendor.GetList());
+    }
 
   }
 }
