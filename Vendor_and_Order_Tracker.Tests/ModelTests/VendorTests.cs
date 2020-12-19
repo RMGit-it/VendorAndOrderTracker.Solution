@@ -52,7 +52,7 @@ namespace Vendor_and_Order_Tracker.Tests
       Vendor ven2 = new Vendor("a","b","c","d","e","f","g","h");
       Vendor.ClearList();
       int listCount = Vendor.GetList().Count;
-      Assert.AreEqual(1, listCount);
+      Assert.AreEqual(0, listCount);
     }
 
   }
