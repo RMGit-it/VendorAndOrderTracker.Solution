@@ -25,7 +25,7 @@ namespace Vendor_and_Order_Tracker.Tests
     public void GetVariousProperties_ReturnVariousPropertiesOfVendor_True()
     {
     Vendor ven1 = new Vendor("a","b","c","d","e","f","g","h");
-    Assert.AreEqual("a1", ven1.GetVendorName());
+    Assert.AreEqual("a", ven1.GetVendorName());
     Assert.AreEqual("b1", ven1.GetShipToName());
     Assert.AreEqual("c1", ven1.GetAddress());
     Assert.AreEqual("d1", ven1.GetState());
