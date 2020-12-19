@@ -35,7 +35,7 @@ namespace Vendor_and_Order_Tracker.Models
       Danish = danish;
     }
 
-    public void ClearList()
+    public static void ClearList()
     {
       _orderList.Clear();
     }

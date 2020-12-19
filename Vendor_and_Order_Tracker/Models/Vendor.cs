@@ -31,7 +31,7 @@ namespace Vendor_and_Order_Tracker.Models
       Email = email;
     }
 
-    public void ClearList()
+    public static void ClearList()
     {
       _vendorList.Clear();
     }
