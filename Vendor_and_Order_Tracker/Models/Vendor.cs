@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 namespace Vendor_and_Order_Tracker.Models
 {
@@ -20,7 +21,7 @@ namespace Vendor_and_Order_Tracker.Models
     public Vendor(string vendorName, string shipToName, string shipAddress, string shipState, string shipCity, string shipZip, string phoneNum, string email)
     {
       _vendorList.Add(this);
-      VendorId = "VN" + Vendor.DateTime();
+      VendorId = "VN" + String.Concat(DateTime.Now.ToString().Where(x => !Char.IsWhiteSpace(x)));
       VendorName = vendorName;
       ShipToName = shipToName;
       Address = shipAddress;
@@ -41,12 +42,6 @@ namespace Vendor_and_Order_Tracker.Models
       return _vendorList;
     }
 
-    public static string DateTime()
-    {
-      DateTime now = new DateTime();
-      return now.ToString();
-    }
-
     public string GetVendorId()
     {
       return this.VendorId;
@@ -56,5 +51,41 @@ namespace Vendor_and_Order_Tracker.Models
     {
       return this.VendorName;
     }
+
+    public string GetShipToName()
+    {
+      return this.ShipToName;
+    }
+
+    public string GetAddress()
+    {
+      return this.Address;
+    }
+
+    public string GetState()
+    {
+      return this.State;
+    }
+
+    public string GetCity()
+    {
+      return this.City;
+    }
+
+    public string GetZipcode()
+    {
+      return this.Zipcode;
+    }
+
+    public string GetPhone()
+    {
+      return this.Phone;
+    }
+
+    public string GetEmail()
+    {
+      return this.Email;
+    }
+    
   }
 }
