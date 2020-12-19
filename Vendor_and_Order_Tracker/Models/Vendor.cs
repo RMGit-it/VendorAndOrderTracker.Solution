@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace Vendor_and_Order_Tracker.Models
 {
@@ -7,7 +8,7 @@ namespace Vendor_and_Order_Tracker.Models
     private static List<Vendor> _vendorList = new List<Vendor> {};
 
     private string VendorName { get; set; }
-    private string Id { get; set; }
+    private string VendorId { get; set; }
     private string ShipToName { get; set; }
     private string Address { get; set; }
     private string State { get; set; }
@@ -19,8 +20,8 @@ namespace Vendor_and_Order_Tracker.Models
     public Vendor(string vendorName, string shipToName, string shipAddress, string shipState, string shipCity, string shipZip, string phoneNum, string email)
     {
       _vendorList.Add(this);
+      VendorId = "VN" + Vendor.DateTime();
       VendorName = vendorName;
-      Id = "uniqueVendorId()";
       ShipToName = shipToName;
       Address = shipAddress;
       State = shipState;
@@ -35,9 +36,25 @@ namespace Vendor_and_Order_Tracker.Models
       _vendorList.Clear();
     }
 
-    public List<Vendor> GetList()
+    public static List<Vendor> GetList()
     {
       return _vendorList;
+    }
+
+    public static string DateTime()
+    {
+      DateTime now = new DateTime();
+      return now.ToString();
+    }
+
+    public string GetVendorId()
+    {
+      return this.VendorId;
+    }
+
+    public string GetVendorName()
+    {
+      return this.VendorName;
     }
   }
 }

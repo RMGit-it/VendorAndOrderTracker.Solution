@@ -17,7 +17,7 @@ namespace Vendor_and_Order_Tracker.Controllers
     [HttpGet("/orders/new")]
     public ActionResult New()
     {
-      List<Vendor> vendorList = Vendor.GetList();
+      List<Vendor> vendorList = Order.VendorGetList();
       return View(vendorList);
     }
 

@@ -13,7 +13,7 @@
 
   
 <form action="/orders" method="post">
-  <select name="orderVendorName">
+  <select name="orderVendorId">
       @foreach (Vendor element in Model)
       {
         <option value=@element.Id>@element.Name</option>

@@ -13,7 +13,7 @@
 
 @foreach (Order element in Model)
 {
-  <h2><a href="orders/@element.Id">@element.Id</a></h2>
+  <h2><a href="orders/@element.GetOrderId()">@element.GetOrderId()</a></h2>
 }
 
 <p><a href="/orders/new">Add new order</a></p>
