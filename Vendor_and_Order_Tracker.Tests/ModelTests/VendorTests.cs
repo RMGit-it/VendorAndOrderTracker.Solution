@@ -45,5 +45,15 @@ namespace Vendor_and_Order_Tracker.Tests
       CollectionAssert.AreEqual(list1, Vendor.GetList());
     }
 
+    [TestMethod]
+    public void ClearList_ReturnAnEmptyStaticList_True()
+    {
+      Vendor ven1 = new Vendor("a","b","c","d","e","f","g","h");
+      Vendor ven2 = new Vendor("a","b","c","d","e","f","g","h");
+      Vendor.ClearList();
+      int listCount = Vendor.GetList().Count;
+      Assert.AreEqual(1, listCount);
+    }
+
   }
 }
