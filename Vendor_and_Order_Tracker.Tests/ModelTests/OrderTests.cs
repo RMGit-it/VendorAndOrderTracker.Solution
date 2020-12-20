@@ -35,7 +35,15 @@ namespace Vendor_and_Order_Tracker.Tests
       Assert.AreEqual("h", ord1.GetBaklava());
       Assert.AreEqual("i", ord1.GetDanish());
       Assert.AreEqual("OR" + String.Concat(DateTime.Now.ToString().Where(x => !Char.IsWhiteSpace(x))), ord1.GetOrderId());
+    }
 
+    [TestMethod]
+    public void GetList_RreturnStaticList_True()
+    {
+      Order ord1 = new Order("a","b","c","d","e","f","g","h","i");
+      Order ord2 = new Order("a","b","c","d","e","f","g","h","i");
+      List<Order> list1 = new List<Order> { ord1 };
+      CollectionAssert.AreEqual(list1, Order.GetList());
     }
   }
 }
