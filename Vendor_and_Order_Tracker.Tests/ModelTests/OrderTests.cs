@@ -42,7 +42,7 @@ namespace Vendor_and_Order_Tracker.Tests
     {
       Order ord1 = new Order("a","b","c","d","e","f","g","h","i");
       Order ord2 = new Order("a","b","c","d","e","f","g","h","i");
-      List<Order> list1 = new List<Order> { ord1 };
+      List<Order> list1 = new List<Order> { ord1, ord2 };
       CollectionAssert.AreEqual(list1, Order.GetList());
     }
   }
