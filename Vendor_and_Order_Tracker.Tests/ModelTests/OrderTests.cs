@@ -77,7 +77,7 @@ namespace Vendor_and_Order_Tracker.Tests
       Order ord1 = new Order(1,"od","dfd",1,1,1,1,1,1);
       Order ord2 = new Order(1,"od","dfd",1,1,1,1,1,1);
       Order ord3 = new Order(1,"od","dfd",1,1,1,1,1,1);
-      Assert.AreEqual(2, ord3.GetListId());
+      Assert.AreEqual(3, ord3.GetListId());
     }
 
   }
