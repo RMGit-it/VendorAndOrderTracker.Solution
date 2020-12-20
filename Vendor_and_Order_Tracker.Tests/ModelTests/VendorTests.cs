@@ -60,7 +60,7 @@ namespace Vendor_and_Order_Tracker.Tests
     {
       Vendor ven1 = new Vendor("a","b","c","d","e","f","g","h");
       string venId = ven1.GetVendorId();
-      Assert.AreEqual("b", Vendor.FindById(venId).GetVendorName());
+      Assert.AreEqual("a", Vendor.FindById(venId).GetVendorName());
     }
 
   }
