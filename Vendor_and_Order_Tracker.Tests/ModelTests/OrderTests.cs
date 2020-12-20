@@ -25,7 +25,7 @@ namespace Vendor_and_Order_Tracker.Tests
     public void GetVariousOrderProperties_ReturnVariousPropertiesOfOrder_true()
     {
       Order ord1 = new Order("a","b","c","d","e","f","g","h","i");
-      Assert.AreEqual("a1", ord1.GetOrderVendorId());
+      Assert.AreEqual("a", ord1.GetOrderVendorId());
       Assert.AreEqual("b", ord1.GetOrderDate());
       Assert.AreEqual("c", ord1.GetDeliveryForDate());
       Assert.AreEqual("d", ord1.GetRyeLoaf());
