@@ -114,11 +114,6 @@ namespace Vendor_and_Order_Tracker.Models
     {
       return _vendorList[_vendorList.FindIndex(x => x.Id == inputId)];
     }
-
-    // public static Vendor FindById(string inputId)
-    // {
-    //   return _vendorList[_vendorList.FindIndex(x => x.VendorId == inputId)];
-    // }
     
   }
 }

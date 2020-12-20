@@ -17,7 +17,7 @@ else
     <select name="orderVendorId">
         @foreach (Vendor element in Model)
         {
-          <option value=@element.GetVendorId()>@element.GetVendorName()</option>
+          <option value=@element.GetListId()>@element.GetVendorName()</option>
         }
     </select>
 

@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Vendor_and_Order_Tracker.Models;
+
+<h1>Order Information</h1>
+
+<h4>@Model.GetOrderId()</h4>
+<h4>@Model.GetOrderVendorId()</h4>
+<h4>@Model.GetOrderVendorName()</h4>
+<h4>@Model.GetOrderDate()</h4>
+<h4>@Model.GetDeliveryForDate()</h4>
+<h4>@Model.GetRyeLoaf()</h4>
+<h4>@Model.GetWheatLoaf()</h4>
+<h4>@Model.GetGlutenFreeLoaf()</h4>
+<h4>@Model.GetCroissant()</h4>
+<h4>@Model.GetBaklava()</h4>
+<h4>@Model.GetDanish()</h4>
+
+<p><a href="/vendors">Vendors</a></p>
+<p><a href="/orders">Orders</a></p>
+<p><a href="/">Home</a></p>

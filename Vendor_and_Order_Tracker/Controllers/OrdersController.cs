@@ -28,5 +28,12 @@ namespace Vendor_and_Order_Tracker.Controllers
       Order order = new Order(orderVendorId, orderDate, deliveryForDate, ryeLoaf, wheatLoaf, gfLoaf, croissant, baklava, danish);
       return RedirectToAction("Index");
     }
+
+    [HttpGet("/orders/{id}")]
+    public ActionResult Show(int id)
+    {
+      Order selectedOrder = Order.FindById(id);
+      return View(selectedOrder);
+    }
   }
 }
