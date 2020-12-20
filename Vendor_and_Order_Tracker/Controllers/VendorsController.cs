@@ -28,11 +28,12 @@ namespace Vendor_and_Order_Tracker.Controllers
       return RedirectToAction("Index");
     }
 
-    // [HttpGet("/vendor/{GetVendorId()}")]
-    // public ActionResult Show(string GetVendorId())
-    // {
-    //   Vendor selectedVendor = Vendor.FindById();
-    //   return View(selectedVendor);
-    // }
+    [HttpGet("/vendor/{id}")]
+    public ActionResult Show(string id)
+    {
+      Console.WriteLine(id);
+      Vendor selectedVendor = Vendor.FindById(id);
+      return View(selectedVendor);
+    }
   }
 }

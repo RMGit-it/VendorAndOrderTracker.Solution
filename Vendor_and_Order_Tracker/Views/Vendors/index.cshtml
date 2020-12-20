@@ -13,7 +13,8 @@
 
 @foreach (Vendor element in Model)
 {
-  <h2><a href="vendors/@element.GetVendorId()">@element.GetVendorName()</a></h2>
+  int tempListId = @element.GetListId();
+  <h2><a href="vendors/@tempListId">@element.GetVendorName()</a></h2>
 }
 
 <p><a href="/vendors/new">Add new vendor</a></p>
