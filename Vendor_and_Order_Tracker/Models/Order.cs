@@ -8,24 +8,26 @@ namespace Vendor_and_Order_Tracker.Models
   {
     private static List<Order> _orderList = new List<Order> {};
 
-    private string OrderVendorId { get; set; }
-    // private string OrderVendorName { get; set; }
+    private int OrderVendorId { get; set; }
+    private string OrderVendorName { get; set; }
+    private int Id { get; set; }
     private string OrderId { get; set; }
     private string OrderDate { get; set; }
     private string DeliveryForDate { get; set; }
-    private string RyeLoaf { get; set; }
-    private string WheatLoaf { get; set; }
-    private string GlutenFreeLoaf { get; set; }
-    private string Croissant { get; set; }
-    private string Baklava { get; set; }
-    private string Danish { get; set; }
+    private int RyeLoaf { get; set; }
+    private int WheatLoaf { get; set; }
+    private int GlutenFreeLoaf { get; set; }
+    private int Croissant { get; set; }
+    private int Baklava { get; set; }
+    private int Danish { get; set; }
 
-    public Order(string orderVendorId, string orderDate, string deliveryForDate, string ryeLoaf, string wheatLoaf, string gfLoaf, string croissant, string baklava, string danish)
+    public Order(int orderVendorId, string orderDate, string deliveryForDate, int ryeLoaf, int wheatLoaf, int gfLoaf, int croissant, int baklava, int danish)
     {
       _orderList.Add(this);
+      Id = ListId();
       OrderId = "OR" + DateTime.Now.ToString("yyyyMMddHHmmss");
       OrderVendorId = orderVendorId;
-      // OrderVendorName = orderVendorName;
+      OrderVendorName = Vendor.FindById(orderVendorId).GetVendorName();
       OrderDate = orderDate;
       DeliveryForDate = deliveryForDate;
       RyeLoaf = ryeLoaf;
@@ -51,15 +53,15 @@ namespace Vendor_and_Order_Tracker.Models
       return this.OrderId;
     }
 
-    public string GetOrderVendorId()
+    public int GetOrderVendorId()
     {
       return this.OrderVendorId;
     }
 
-    // public string GetOrderVendorName()
-    // {
-    //   return this.OrderVendorName;
-    // }
+    public string GetOrderVendorName()
+    {
+      return this.OrderVendorName;
+    }
 
     public string GetOrderDate()
     {
@@ -71,39 +73,66 @@ namespace Vendor_and_Order_Tracker.Models
       return this.DeliveryForDate;
     }
 
-    public string GetRyeLoaf()
+    public int GetRyeLoaf()
     {
       return this.RyeLoaf;
     }
 
-    public string GetWheatLoaf()
+    public int GetWheatLoaf()
     {
       return this.WheatLoaf;
     }
 
-    public string GetGlutenFreeLoaf()
+    public int GetGlutenFreeLoaf()
     {
       return this.GlutenFreeLoaf;
     }
 
-    public string GetCroissant()
+    public int GetCroissant()
     {
       return this.Croissant;
     }
 
-    public string GetBaklava()
+    public int GetBaklava()
     {
       return this.Baklava;
     }
 
-    public string GetDanish()
+    public int GetDanish()
     {
       return this.Danish;
+    }
+
+    public int GetListId()
+    {
+      return this.Id;
+    }
+
+        public int ListId()
+    {
+      int Num = 0;
+      for (int i=1; i <= 10000; i++)
+      {
+        if(_orderList.Exists(x => x.Id == i))
+        {
+        }
+        else
+        {
+          return Num += i;
+        }
+      }
+      return Num;
     }
     
     public static List<Vendor> VendorGetList()
     {
       return Vendor.GetList();
     }
+
+    public static Order FindById(int inputId)
+    {
+      return _orderList[_orderList.FindIndex(x => x.Id == inputId)];
+    }
+
   }
 }

@@ -23,7 +23,7 @@ namespace Vendor_and_Order_Tracker.Controllers
     }
 
     [HttpPost("/orders")]
-    public ActionResult Create(string orderVendorId, string orderDate, string deliveryForDate, string ryeLoaf, string wheatLoaf, string gfLoaf, string croissant, string baklava, string danish)
+    public ActionResult Create(int orderVendorId, string orderDate, string deliveryForDate, int ryeLoaf, int wheatLoaf, int gfLoaf, int croissant, int baklava, int danish)
     {
       Order order = new Order(orderVendorId, orderDate, deliveryForDate, ryeLoaf, wheatLoaf, gfLoaf, croissant, baklava, danish);
       return RedirectToAction("Index");

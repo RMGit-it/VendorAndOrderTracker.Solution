@@ -110,10 +110,15 @@ namespace Vendor_and_Order_Tracker.Models
       return Num;
     }
 
-    public static Vendor FindById(string inputId)
+    public static Vendor FindById(int inputId)
     {
-      return _vendorList[_vendorList.FindIndex(x => x.VendorId == inputId)];
+      return _vendorList[_vendorList.FindIndex(x => x.Id == inputId)];
     }
+
+    // public static Vendor FindById(string inputId)
+    // {
+    //   return _vendorList[_vendorList.FindIndex(x => x.VendorId == inputId)];
+    // }
     
   }
 }

@@ -28,10 +28,9 @@ namespace Vendor_and_Order_Tracker.Controllers
       return RedirectToAction("Index");
     }
 
-    [HttpGet("/vendor/{id}")]
-    public ActionResult Show(string id)
+    [HttpGet("/vendors/{id}")]
+    public ActionResult Show(int id)
     {
-      Console.WriteLine(id);
       Vendor selectedVendor = Vendor.FindById(id);
       return View(selectedVendor);
     }
