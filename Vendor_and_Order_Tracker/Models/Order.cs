@@ -23,7 +23,7 @@ namespace Vendor_and_Order_Tracker.Models
     public Order(string orderVendorId, string orderDate, string deliveryForDate, string ryeLoaf, string wheatLoaf, string gfLoaf, string croissant, string baklava, string danish)
     {
       _orderList.Add(this);
-      OrderId = "OR" + String.Concat(DateTime.Now.ToString().Where(x => !Char.IsWhiteSpace(x)));
+      OrderId = "OR" + DateTime.Now.ToString("yyyyMMddHHmmss");
       OrderVendorId = orderVendorId;
       // OrderVendorName = orderVendorName;
       OrderDate = orderDate;

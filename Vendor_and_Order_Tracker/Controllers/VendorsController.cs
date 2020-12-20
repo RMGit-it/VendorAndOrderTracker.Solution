@@ -2,8 +2,7 @@ using System.Collections.Generic;
 using System;
 using Microsoft.AspNetCore.Mvc;
 using Vendor_and_Order_Tracker.Models;
-// using System.Web.Mvc;
-// using System.Web.SessionState;
+
 
 namespace Vendor_and_Order_Tracker.Controllers
 {

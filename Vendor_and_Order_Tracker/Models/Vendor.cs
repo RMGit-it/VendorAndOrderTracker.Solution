@@ -21,7 +21,7 @@ namespace Vendor_and_Order_Tracker.Models
     public Vendor(string vendorName, string shipToName, string shipAddress, string shipState, string shipCity, string shipZip, string phoneNum, string email)
     {
       _vendorList.Add(this);
-      VendorId = "VN" + String.Concat(DateTime.Now.ToString().Where(x => !Char.IsWhiteSpace(x)));
+      VendorId = "VN" + DateTime.Now.ToString("yyyyMMddHHmmss");
       VendorName = vendorName;
       ShipToName = shipToName;
       Address = shipAddress;

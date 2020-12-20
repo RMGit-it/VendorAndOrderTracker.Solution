@@ -34,7 +34,7 @@ namespace Vendor_and_Order_Tracker.Tests
       Assert.AreEqual("g", ord1.GetCroissant());
       Assert.AreEqual("h", ord1.GetBaklava());
       Assert.AreEqual("i", ord1.GetDanish());
-      Assert.AreEqual("OR" + String.Concat(DateTime.Now.ToString().Where(x => !Char.IsWhiteSpace(x))), ord1.GetOrderId());
+      Assert.AreEqual("OR" + DateTime.Now.ToString("yyyyMMddHHmmss"), ord1.GetOrderId());
     }
 
     [TestMethod]
@@ -53,7 +53,7 @@ namespace Vendor_and_Order_Tracker.Tests
       Order ord2 = new Order("a","b","c","d","e","f","g","h","i");
       Order.ClearList();
       int listCount = Order.GetList().Count;
-      Assert.AreEqual(1, listCount);
+      Assert.AreEqual(0, listCount);
     }
   }
 }

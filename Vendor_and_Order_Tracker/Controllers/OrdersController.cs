@@ -5,7 +5,7 @@ using Vendor_and_Order_Tracker.Models;
 
 namespace Vendor_and_Order_Tracker.Controllers
 {
-  public class OrderController : Controller
+  public class OrdersController : Controller
   {
     [HttpGet("/orders")]
     public ActionResult Index()

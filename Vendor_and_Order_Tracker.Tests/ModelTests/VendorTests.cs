@@ -33,7 +33,7 @@ namespace Vendor_and_Order_Tracker.Tests
       Assert.AreEqual("f", ven1.GetZipcode());
       Assert.AreEqual("g", ven1.GetPhone());
       Assert.AreEqual("h", ven1.GetEmail());
-      Assert.AreEqual("VN" + String.Concat(DateTime.Now.ToString().Where(x => !Char.IsWhiteSpace(x))), ven1.GetVendorId());
+      Assert.AreEqual("VN" + DateTime.Now.ToString("yyyyMMddHHmmss"), ven1.GetVendorId());
     }
 
     [TestMethod]

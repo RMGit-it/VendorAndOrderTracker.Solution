@@ -2,7 +2,7 @@
   Layout = "_Layout";
 }
 
-
+@using Vendor_and_Order_Tracker.Models;
 
 <h1>Add Order</h1>
 
@@ -13,30 +13,18 @@
 
   
 <form action="/orders" method="post">
-  @* <select name="orderVendorId">
+  <select name="orderVendorId">
       @foreach (Vendor element in Model)
       {
-        <option value=@element.Id>@element.Name</option>
+        <option value=@element.GetVendorId()>@element.GetVendorName()</option>
       }
   </select>
-   *@
-  
-  @* <select name="orderVenorName">
-    <ul>
-      @foreach (Vendor element in Model)
-      {
-        <li><option value=@element.Id>@element.Name</option></li>
-      }
-    </ul>
-  </select> *@
 
   <label for="orderDate">Order Date</label>
   <input id="orderDate" name="orderDate" type="date">
 
   <label for="deliveryForDate">Delivery-For Date</label>
   <input id="deliveryForDate" name="deliveryForDate" type="date">
-
-
 
   <label for="ryeLoaf">Rye Loaf</label>
   <input id="ryeLoaf" name="ryeLoaf" type="number">
