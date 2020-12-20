@@ -55,5 +55,13 @@ namespace Vendor_and_Order_Tracker.Tests
       Assert.AreEqual(0, listCount);
     }
 
+    [TestMethod]
+    public void FindById_ReturnObjectWithMatchingIdProperty_True()
+    {
+      Vendor ven1 = new Vendor("a","b","c","d","e","f","g","h");
+      string venId = ven1.GetVendorId();
+      Assert.AreEqual("b", Vendor.FindById(venId).GetVendorName());
+    }
+
   }
 }

@@ -27,5 +27,12 @@ namespace Vendor_and_Order_Tracker.Controllers
       Vendor vendor = new Vendor(vendorName, shipToName, shipAddress, shipState, shipCity, shipZip, phoneNum, email);
       return RedirectToAction("Index");
     }
+
+    // [HttpGet("/vendor/{GetVendorId()}")]
+    // public ActionResult Show(string GetVendorId())
+    // {
+    //   Vendor selectedVendor = Vendor.FindById();
+    //   return View(selectedVendor);
+    // }
   }
 }

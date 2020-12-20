@@ -10,43 +10,45 @@
 {
   <h2>No Vendors have been added yet!</h2>
 }
-
+else
+{
   
-<form action="/orders" method="post">
-  <select name="orderVendorId">
-      @foreach (Vendor element in Model)
-      {
-        <option value=@element.GetVendorId()>@element.GetVendorName()</option>
-      }
-  </select>
+  <form action="/orders" method="post">
+    <select name="orderVendorId">
+        @foreach (Vendor element in Model)
+        {
+          <option value=@element.GetVendorId()>@element.GetVendorName()</option>
+        }
+    </select>
 
-  <label for="orderDate">Order Date</label>
-  <input id="orderDate" name="orderDate" type="date">
+    <label for="orderDate">Order Date</label>
+    <input id="orderDate" name="orderDate" type="date">
 
-  <label for="deliveryForDate">Delivery-For Date</label>
-  <input id="deliveryForDate" name="deliveryForDate" type="date">
+    <label for="deliveryForDate">Delivery-For Date</label>
+    <input id="deliveryForDate" name="deliveryForDate" type="date">
 
-  <label for="ryeLoaf">Rye Loaf</label>
-  <input id="ryeLoaf" name="ryeLoaf" type="number">
+    <label for="ryeLoaf">Rye Loaf</label>
+    <input id="ryeLoaf" name="ryeLoaf" type="number">
 
-  <label for="wheatLoaf">Wheat Loaf</label>
-  <input id="wheatLoaf" name="wheatLoaf" type="number">
+    <label for="wheatLoaf">Wheat Loaf</label>
+    <input id="wheatLoaf" name="wheatLoaf" type="number">
 
-  <label for="gfLoaf">Gluten Free Loaf</label>
-  <input id="gfLoaf" name="gfLoaf" type="number">
+    <label for="gfLoaf">Gluten Free Loaf</label>
+    <input id="gfLoaf" name="gfLoaf" type="number">
 
-  <label for="croissant">Gluten Free Loaf</label>
-  <input id="croissant" name="croissant" type="number">
+    <label for="croissant">Gluten Free Loaf</label>
+    <input id="croissant" name="croissant" type="number">
 
-  <label for="baklava">Baklava</label>
-  <input id="baklava" name="baklava" type="number">
+    <label for="baklava">Baklava</label>
+    <input id="baklava" name="baklava" type="number">
 
-  <label for="danish">Danish</label>
-  <input id="danish" name="danish" type="number">
+    <label for="danish">Danish</label>
+    <input id="danish" name="danish" type="number">
 
-  <button type="submit">Add</button>
-</form>
+    <button type="submit">Add</button>
+  </form>
+}
 
-<p><a href="/vendors">Back to Vendors</a></p>
+<p><a href="/vendors">Vendors</a></p>
 <p><a href="/orders">Orders</a></p>
 <p><a href="/">Home</a></p>

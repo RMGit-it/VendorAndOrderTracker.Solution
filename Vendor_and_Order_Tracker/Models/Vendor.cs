@@ -86,6 +86,11 @@ namespace Vendor_and_Order_Tracker.Models
     {
       return this.Email;
     }
+
+    public static Vendor FindById(string inputId)
+    {
+      return _vendorList[_vendorList.FindIndex(x => x.VendorId == inputId)];
+    }
     
   }
 }
