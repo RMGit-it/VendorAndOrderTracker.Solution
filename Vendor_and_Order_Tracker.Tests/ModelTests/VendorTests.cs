@@ -24,16 +24,16 @@ namespace Vendor_and_Order_Tracker.Tests
     [TestMethod]
     public void GetVariousProperties_ReturnVariousPropertiesOfVendor_True()
     {
-    Vendor ven1 = new Vendor("a","b","c","d","e","f","g","h");
-    Assert.AreEqual("a", ven1.GetVendorName());
-    Assert.AreEqual("b", ven1.GetShipToName());
-    Assert.AreEqual("c", ven1.GetAddress());
-    Assert.AreEqual("d", ven1.GetState());
-    Assert.AreEqual("e", ven1.GetCity());
-    Assert.AreEqual("f", ven1.GetZipcode());
-    Assert.AreEqual("g", ven1.GetPhone());
-    Assert.AreEqual("h", ven1.GetEmail());
-    Assert.AreEqual("VN" + String.Concat(DateTime.Now.ToString().Where(x => !Char.IsWhiteSpace(x))), ven1.GetVendorId());
+      Vendor ven1 = new Vendor("a","b","c","d","e","f","g","h");
+      Assert.AreEqual("a", ven1.GetVendorName());
+      Assert.AreEqual("b", ven1.GetShipToName());
+      Assert.AreEqual("c", ven1.GetAddress());
+      Assert.AreEqual("d", ven1.GetState());
+      Assert.AreEqual("e", ven1.GetCity());
+      Assert.AreEqual("f", ven1.GetZipcode());
+      Assert.AreEqual("g", ven1.GetPhone());
+      Assert.AreEqual("h", ven1.GetEmail());
+      Assert.AreEqual("VN" + String.Concat(DateTime.Now.ToString().Where(x => !Char.IsWhiteSpace(x))), ven1.GetVendorId());
     }
 
     [TestMethod]

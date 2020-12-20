@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 namespace Vendor_and_Order_Tracker.Models
 {
@@ -8,7 +9,7 @@ namespace Vendor_and_Order_Tracker.Models
     private static List<Order> _orderList = new List<Order> {};
 
     private string OrderVendorId { get; set; }
-    private string OrderVendorName { get; set; }
+    // private string OrderVendorName { get; set; }
     private string OrderId { get; set; }
     private string OrderDate { get; set; }
     private string DeliveryForDate { get; set; }
@@ -22,9 +23,9 @@ namespace Vendor_and_Order_Tracker.Models
     public Order(string orderVendorId, string orderDate, string deliveryForDate, string ryeLoaf, string wheatLoaf, string gfLoaf, string croissant, string baklava, string danish)
     {
       _orderList.Add(this);
-      OrderId = "OR" + Order.DateTime();
+      OrderId = "OR" + String.Concat(DateTime.Now.ToString().Where(x => !Char.IsWhiteSpace(x)));
       OrderVendorId = orderVendorId;
-      OrderVendorName = "public VendorNameGetter";
+      // OrderVendorName = orderVendorName;
       OrderDate = orderDate;
       DeliveryForDate = deliveryForDate;
       RyeLoaf = ryeLoaf;
@@ -45,17 +46,61 @@ namespace Vendor_and_Order_Tracker.Models
       return _orderList;
     }
 
-    public static string DateTime()
-    {
-      DateTime now = new DateTime();
-      return now.ToString();
-    }
-
     public string GetOrderId()
     {
       return this.OrderId;
     }
 
+    public string GetOrderVendorId()
+    {
+      return this.OrderVendorId;
+    }
+
+    // public string GetOrderVendorName()
+    // {
+    //   return this.OrderVendorName;
+    // }
+
+    public string GetOrderDate()
+    {
+      return this.OrderDate;
+    }
+
+    public string GetDeliveryForDate()
+    {
+      return this.DeliveryForDate;
+    }
+
+    public string GetRyeLoaf()
+    {
+      return this.RyeLoaf;
+    }
+
+    public string GetWheatLoaf()
+    {
+      return this.WheatLoaf;
+    }
+
+    public string GetGlutenFreeLoaf()
+    {
+      return this.GlutenFreeLoaf;
+    }
+
+    public string GetCroissant()
+    {
+      return this.Croissant;
+    }
+
+    public string GetBaklava()
+    {
+      return this.Baklava;
+    }
+
+    public string GetDanish()
+    {
+      return this.Danish;
+    }
+    
     public static List<Vendor> VendorGetList()
     {
       return Vendor.GetList();
