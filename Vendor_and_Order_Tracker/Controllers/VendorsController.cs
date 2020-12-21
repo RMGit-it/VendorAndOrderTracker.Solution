@@ -32,7 +32,11 @@ namespace Vendor_and_Order_Tracker.Controllers
     public ActionResult Show(int id)
     {
       Vendor selectedVendor = Vendor.FindById(id);
-      return View(selectedVendor);
+      List<Order> orderList = Order.GetList();
+      List<Vendor> vendorList = new List<Vendor> { selectedVendor };
+      List<Object> objectList = new List<Object> { vendorList, orderList };
+
+      return View(objectList);
     }
   }
 }

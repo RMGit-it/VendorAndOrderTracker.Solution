@@ -6,14 +6,23 @@
 
 <h1>Vendor Information</h1>
 
-<h4>@Model.GetVendorName()</h4>
-<h4>@Model.GetVendorId()</h4>
-<h4>@Model.GetAddress()</h4>
-<h4>@Model.GetState()</h4>
-<h4>@Model.GetCity()</h4>
-<h4>@Model.GetZipcode()</h4>
-<h4>@Model.GetPhone()</h4>
-<h4>@Model.GetEmail()</h4>
+<h4>@Model[0][0].GetVendorName()</h4>
+<h4>@Model[0][0].GetVendorId()</h4>
+<h4>@Model[0][0].GetAddress()</h4>
+<h4>@Model[0][0].GetState()</h4>
+<h4>@Model[0][0].GetCity()</h4>
+<h4>@Model[0][0].GetZipcode()</h4>
+<h4>@Model[0][0].GetPhone()</h4>
+<h4>@Model[0][0].GetEmail()</h4>
+
+@for (int i = 0; i < Model[1].Count; i++)
+{
+  if (Model[1][i].GetOrderVendorUniqueId() == Model[0][0].GetVendorId())
+  {
+  <p>@Model[1][i].GetOrderId()</p>;
+  }
+}
+
 
 
 <p><a href="/vendors">Vendors</a></p>
