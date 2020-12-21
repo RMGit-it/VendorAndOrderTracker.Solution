@@ -9,6 +9,7 @@ namespace Vendor_and_Order_Tracker.Models
     private static List<Order> _orderList = new List<Order> {};
 
     private int OrderVendorId { get; set; }
+    private string OrderVendorUniqueId { get; set; }
     private string OrderVendorName { get; set; }
     private int Id { get; set; }
     private string OrderId { get; set; }
@@ -27,6 +28,7 @@ namespace Vendor_and_Order_Tracker.Models
       Id = ListId();
       OrderId = "OR" + DateTime.Now.ToString("yyyyMMddHHmmss");
       OrderVendorId = orderVendorId;
+      OrderVendorUniqueId = Vendor.FindById(orderVendorId).GetVendorId();
       OrderVendorName = Vendor.FindById(orderVendorId).GetVendorName();
       OrderDate = orderDate;
       DeliveryForDate = deliveryForDate;
@@ -101,6 +103,11 @@ namespace Vendor_and_Order_Tracker.Models
     public int GetDanish()
     {
       return this.Danish;
+    }
+
+    public string GetOrderVendorUniqueId()
+    {
+      return this.OrderVendorUniqueId;
     }
 
     public int GetListId()

@@ -25,7 +25,7 @@ namespace Vendor_and_Order_Tracker.Controllers
     public ActionResult Create(string vendorName, string shipToName, string shipAddress, string shipState, string shipCity, string shipZip, string phoneNum, string email)
     {
       Vendor vendor = new Vendor(vendorName, shipToName, shipAddress, shipState, shipCity, shipZip, phoneNum, email);
-      return RedirectToAction("Index");
+      return RedirectToAction("Index", "Home");
     }
 
     [HttpGet("/vendors/{id}")]
