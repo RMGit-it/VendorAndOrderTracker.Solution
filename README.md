@@ -1,6 +1,6 @@
 # **Vendor_and_Order_Tracker.Solution**
 Project Initiated: 2020-12-18<br>
-Updated: 2020-12-18
+Updated: 2020-12-22
 ## **Project Description**
 
 ## **Required for Use**
@@ -24,7 +24,7 @@ https://dotnet.microsoft.com/download
 
     <code>dotnet run</code>
 
-    The program should launch using your default web browser at URL: localhost:5000
+    The program should launch using your default web browser at URL: localhost:5000.  If the program does not launch automatically, you can type "localhost:5000" into your browsers URL bar manually.
 
 **Option 2** (via git console/terminal)
 1) Open your Git enabled terminal/console and navigate to a directory that you wish to download this project to.
@@ -43,16 +43,17 @@ https://dotnet.microsoft.com/download
 
     <code>dotnet run</code>
 
-    The program should launch using your default web browser at URL: localhost:5000
+    The program should launch using your default web browser at URL: localhost:5000.  If the program does not launch automatically, you can type "localhost:5000" into your browsers URL bar manually.
 ## **Usage / Examples**
 
 ## **Planned Features**
-No new features are planned at this time.
+* css styling and improved ui layout
 ## **Known Bugs**
 There are no known bugs
 ## **Technology Used**
 * C#
 * .NET Core
+* HTML
 ## **Authors and Contributors**
 Authored by: Randel Moore
 ## **Contact**
