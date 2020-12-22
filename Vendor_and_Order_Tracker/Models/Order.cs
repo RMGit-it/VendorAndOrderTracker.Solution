@@ -13,6 +13,12 @@ namespace Vendor_and_Order_Tracker.Models
     private string OrderVendorName { get; set; }
     private int Id { get; set; }
     private string OrderId { get; set; }
+
+    private string Title { get; set; }
+
+    private string Description { get; set; }
+
+    private int Price { get; set; }
     private string OrderDate { get; set; }
     private string DeliveryForDate { get; set; }
     private int RyeLoaf { get; set; }
@@ -22,7 +28,7 @@ namespace Vendor_and_Order_Tracker.Models
     private int Baklava { get; set; }
     private int Danish { get; set; }
 
-    public Order(int orderVendorId, string orderDate, string deliveryForDate, int ryeLoaf, int wheatLoaf, int gfLoaf, int croissant, int baklava, int danish)
+    public Order(int orderVendorId, string title, string description, int price, string orderDate, string deliveryForDate, int ryeLoaf, int wheatLoaf, int gfLoaf, int croissant, int baklava, int danish)
     {
       _orderList.Add(this);
       Id = ListId();
@@ -30,6 +36,9 @@ namespace Vendor_and_Order_Tracker.Models
       OrderVendorId = orderVendorId;
       OrderVendorUniqueId = Vendor.FindById(orderVendorId).GetVendorId();
       OrderVendorName = Vendor.FindById(orderVendorId).GetVendorName();
+      Title = title;
+      Description = description;
+      Price = price;
       OrderDate = orderDate;
       DeliveryForDate = deliveryForDate;
       RyeLoaf = ryeLoaf;
@@ -63,6 +72,21 @@ namespace Vendor_and_Order_Tracker.Models
     public string GetOrderVendorName()
     {
       return this.OrderVendorName;
+    }
+
+    public string GetTitle()
+    {
+      return this.Title;
+    }
+
+    public string GetDescription()
+    {
+      return this.Description;
+    }
+
+    public int GetPrice()
+    {
+      return this.Price;
     }
 
     public string GetOrderDate()

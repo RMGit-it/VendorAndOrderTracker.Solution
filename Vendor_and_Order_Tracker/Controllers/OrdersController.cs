@@ -19,13 +19,12 @@ namespace Vendor_and_Order_Tracker.Controllers
     {
       List<Vendor> vendorList = Order.VendorGetList();
       return View(vendorList);
-      // return View();
     }
 
     [HttpPost("/orders")]
-    public ActionResult Create(int orderVendorId, string orderDate, string deliveryForDate, int ryeLoaf, int wheatLoaf, int gfLoaf, int croissant, int baklava, int danish)
+    public ActionResult Create(int orderVendorId, string title, string description, int price, string orderDate, string deliveryForDate, int ryeLoaf, int wheatLoaf, int gfLoaf, int croissant, int baklava, int danish)
     {
-      Order order = new Order(orderVendorId, orderDate, deliveryForDate, ryeLoaf, wheatLoaf, gfLoaf, croissant, baklava, danish);
+      Order order = new Order(orderVendorId, title, description, price, orderDate, deliveryForDate, ryeLoaf, wheatLoaf, gfLoaf, croissant, baklava, danish);
       return RedirectToAction("Index");
     }
 
