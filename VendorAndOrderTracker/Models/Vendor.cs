@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 
-namespace Vendor_and_Order_Tracker.Models
+namespace VendorAndOrderTracker.Models
 {
   public class Vendor
   {

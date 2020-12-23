@@ -1,10 +1,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Vendor_and_Order_Tracker.Models;
+using VendorAndOrderTracker.Models;
 using System.Collections.Generic;
 using System;
 using System.Linq;
 
-namespace Vendor_and_Order_Tracker.Tests
+namespace VendorAndOrderTracker.Tests
 {
   [TestClass]
   public class OrderTests : IDisposable
@@ -44,8 +44,8 @@ namespace Vendor_and_Order_Tracker.Tests
     public void GetList_RreturnStaticList_True()
     {
       Vendor ven1 = new Vendor("a","b","c","d","e","f","g","h");
-      Order ord1 = new Order(1,"od","dfd",1,1,1,1,1,1);
-      Order ord2 = new Order(1,"od","dfd",1,1,1,1,1,1);
+      Order ord1 = new Order(1, "txt", "desc", 2, "od","dfd",1,1,1,1,1,1);
+      Order ord2 = new Order(1, "txt", "desc", 2, "od","dfd",1,1,1,1,1,1);
       List<Order> list1 = new List<Order> { ord1, ord2 };
       CollectionAssert.AreEqual(list1, Order.GetList());
     }
@@ -54,8 +54,8 @@ namespace Vendor_and_Order_Tracker.Tests
     public void ClearList_ReturnAnEmptyList_True()
     {
       Vendor ven1 = new Vendor("a","b","c","d","e","f","g","h");
-      Order ord1 = new Order(1,"od","dfd",1,1,1,1,1,1);
-      Order ord2 = new Order(1,"od","dfd",1,1,1,1,1,1);
+      Order ord1 = new Order(1, "txt", "desc", 2, "od","dfd",1,1,1,1,1,1);
+      Order ord2 = new Order(1, "txt", "desc", 2, "od","dfd",1,1,1,1,1,1);
       Order.ClearList();
       int listCount = Order.GetList().Count;
       Assert.AreEqual(0, listCount);
@@ -65,7 +65,7 @@ namespace Vendor_and_Order_Tracker.Tests
     public void FindById_ReturnObjectWithMatchingIdProperty_True()
     {
       Vendor ven1 = new Vendor("a","b","c","d","e","f","g","h");
-      Order ord1 = new Order(1,"od","dfd",1,1,1,1,1,1);
+      Order ord1 = new Order(1, "txt", "desc", 2, "od","dfd",1,1,1,1,1,1);
       int ordId = ord1.GetListId();
       Assert.AreEqual(1, Order.FindById(ordId).GetRyeLoaf());
     }
@@ -74,9 +74,9 @@ namespace Vendor_and_Order_Tracker.Tests
     public void GetListId_GetListIdValue_True()
     {
       Vendor ven1 = new Vendor("a","b","c","d","e","f","g","h");
-      Order ord1 = new Order(1,"od","dfd",1,1,1,1,1,1);
-      Order ord2 = new Order(1,"od","dfd",1,1,1,1,1,1);
-      Order ord3 = new Order(1,"od","dfd",1,1,1,1,1,1);
+      Order ord1 = new Order(1, "txt", "desc", 2, "od","dfd",1,1,1,1,1,1);
+      Order ord2 = new Order(1, "txt", "desc", 2, "od","dfd",1,1,1,1,1,1);
+      Order ord3 = new Order(1, "txt", "desc", 2, "od","dfd",1,1,1,1,1,1);
       Assert.AreEqual(3, ord3.GetListId());
     }
 

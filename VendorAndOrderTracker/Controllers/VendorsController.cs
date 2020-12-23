@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System;
 using Microsoft.AspNetCore.Mvc;
-using Vendor_and_Order_Tracker.Models;
+using VendorAndOrderTracker.Models;
 
 
-namespace Vendor_and_Order_Tracker.Controllers
+namespace VendorAndOrderTracker.Controllers
 {
   public class VendorsController : Controller
   {

@@ -1,10 +1,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Vendor_and_Order_Tracker.Models;
+using VendorAndOrderTracker.Models;
 using System.Collections.Generic;
 using System;
 using System.Linq;
 
-namespace Vendor_and_Order_Tracker.Tests
+namespace VVendorAndOrderTracker.Tests
 {
   [TestClass]
   public class VendorTests : IDisposable
