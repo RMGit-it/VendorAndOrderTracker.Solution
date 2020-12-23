@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Vendor_and_Order_Tracker\Vendor_and_Order_Tracker.csproj" />  
+    <ProjectReference Include="..\VendorAndOrderTracker\VendorAndOrderTracker.csproj" />  
   </ItemGroup>
 
 </Project>
