@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 
-namespace VVendorAndOrderTracker.Tests
+namespace VendorAndOrderTracker.Tests
 {
   [TestClass]
   public class VendorTests : IDisposable

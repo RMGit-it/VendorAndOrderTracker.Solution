@@ -1,0 +1,22 @@
+.header {
+  text-align: center;
+}
+
+.subHeader {
+  text-align: center;
+}
+.jumbotron{
+  background-color: green;
+}
+body {
+  background-color: blue;
+  color: red;
+}
+h1{
+  color: purple;
+}
+
+.container{
+  background-color: green;
+  color: blue;
+}
