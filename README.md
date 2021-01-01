@@ -1,6 +1,6 @@
-# **Vendor_and_Order_Tracker.Solution**
+# **VendorAndOrderTracker.Solution**
 Project Initiated: 2020-12-18<br>
-Updated: 2020-12-24
+Updated: 2021-01-01
 ## **Project Description**
 
 ## **Required for Use**
